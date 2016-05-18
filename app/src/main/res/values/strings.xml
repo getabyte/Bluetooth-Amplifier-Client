@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">BluetoothAmplifierClient</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Buffer Size-->
+    <string name="key_bufferSize">bufferSize</string><!--key to use to save in intent-->
+    <!--Audio Track-->
+    <string name="key_audioTrack">audioTrack</string><!--key to use to save in intent-->
+    <!--Address-->
+    <string name="key_serverAddress">serverAddress</string><!--key to use to save in SharedPreference and intent-->
+
+    <!--Signed-->
+    <string name="key_signed_index">signed_index</string><!-- key to use on SharedPreference, store int-->
+    <string name="signedArrayFirstElement">signed</string><!-- used to set default text on button-->
+    <string-array name="signedArray">
+        <item>@string/signedArrayFirstElement</item>
+        <item>unsigned</item>
+    </string-array>
+
+    <!--Bits Per Sample-->
+    <string name="key_bitsPerSample_index">bitsPerSample_index</string>
+    <string name="bitsPerSampleArrayFirstElement">8</string>
+    <string-array name="bitsPerSampleArray">
+        <item>@string/bitsPerSampleArrayFirstElement</item>
+        <item>16</item>
+    </string-array>
+
+    <!--Channel Type-->
+    <string name="key_channelType_index">channelType_index</string>
+    <string name="channelTypeArrayFirstElement">mono</string>
+    <string-array name="channelTypeArray">
+        <item>@string/channelTypeArrayFirstElement</item>
+        <item>stereo</item>
+    </string-array>
+
+    <!--Bytes Per Frame-->
+    <!-- bytes Per Frame is calculated by bitsPerSample * channels -->
+
+    <!--Endian-->
+    <string name="key_endian_index">endian_index</string>
+    <string name="endianArrayFirstElement">little-endian</string>
+    <string-array name="endianArray">
+        <item>@string/endianArrayFirstElement</item>
+        <item>big-endian</item>
+    </string-array>
+
+    <!--Sample Rate-->
+    <string name="key_sampleRate_index">sampleRate_index</string>
+    <string name="sampleRateArrayFirstElement">44100</string>
+    <string-array name="sampleRateArray">
+        <item>@string/sampleRateArrayFirstElement</item>
+    </string-array>
+</resources>
