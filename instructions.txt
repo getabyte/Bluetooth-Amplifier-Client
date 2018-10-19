@@ -1,0 +1,40 @@
+**********
+I upload it on git hub. If you need to get the source code, you can modify it on your own.
+search Bluetooth Amplifier on git hub.
+or 
+get from here.
+https://github.com/getabyte/Bluetooth-Amplifier-Server
+https://github.com/getabyte/Bluetooth-Amplifier-Client
+**********
+I am currently a student, this is a part of my school project.
+Currently it's still lack of some stability and ui design, and I will improve it in the future.
+If you have any issue or any suggestion, tell me.
+Here it's how to use it:
+
+1.
+Download and install Java Runtime Environment (JRE) on pc.
+2.
+Pair your android device and pc with bluetooth and remember it.
+3.
+open server application on pc
+here
+
+https://onedrive.live.com/redir?resid=9E77B2E1C0B92A19!58931&authkey=!AHx-LlJOCpUZTmk&ithint=file%2cjar
+
+4.
+How to use server application:
+4-1.choose a device which support target data line
+(If all your device does not support, download and install driver from official website, replace windows's build in)
+4-2.Open Customize Audio Streaming Format
+(Right side is possible support format)
+change to try different values.
+4-3.Connect
+Text below will show your streaming settings, will be used on Android side.
+5.
+How to use the android app:
+change parameter to the same as the server side setting.
+make sure the "Remote Device Bluetooth MAC Address" is the same as the server side Address.
+6.Start Streaming!
+
+If strange sound comes out or just no sound at all, try different parameter on server side.
+When need to stop streaming, click "cancel" on Server side. Then click "Cancel Streaming" on your android device

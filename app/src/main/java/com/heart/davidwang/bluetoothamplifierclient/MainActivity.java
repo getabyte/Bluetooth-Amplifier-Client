@@ -17,6 +17,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+
+// TODO: 2017/1/16 解決 Bluetooth 的IllegalArgumentException:  is not a valid Bluetooth address的問題，增加一個Toast提示？
+// TODO: 2018/10/19 Worked for about one minutes and then fail. Why?
 public class MainActivity extends AppCompatActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
@@ -80,30 +83,26 @@ public class MainActivity extends AppCompatActivity {
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch (position){
                 case 0:
-                    return PairDeviceAndStartServerFragment.newInstance();
+                    return ConnectionFragment.newInstance();
                 case 1:
-                    return AndroidDeviceSetupFragment.newInstance();
-                case 2:
-                    return ConnectAndStartServiceFragment.newInstance();
+                    return InstructionFragment.newInstance();
             }
             return null;
         }
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            // Show 2 total pages.
+            return 2;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "1. PC";
+                    return "Connection";
                 case 1:
-                    return "2. Android";
-                case 2:
-                    return "3. Connect";
+                    return "Instruction";
             }
             return null;
         }

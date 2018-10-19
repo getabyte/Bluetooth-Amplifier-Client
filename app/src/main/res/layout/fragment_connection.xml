@@ -2,12 +2,226 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.heart.davidwang.bluetoothamplifierclient.Connection">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    tools:context="com.heart.davidwang.bluetoothamplifierclient.ConnectionFragment"
+    android:layout_marginBottom="56dp"
+    >
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2"
+        android:fillViewport="true"
+        android:layout_marginBottom="60dp"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Address: "
+                    android:id="@+id/textView_serverAddress"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_weight="0.6" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText_serverAddress"
+                    android:hint="Enter Address Here"
+                    android:layout_weight="0.3" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ok"
+                    android:enabled="false"
+                    android:id="@+id/button_serverAddressOK"
+                    android:layout_weight="0.1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Signed: "
+                    android:id="@+id/textView_signed"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_weight="0.5"
+                    android:minWidth="250dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_signed"
+                    android:text="@string/signedArrayFirstElement"
+                    android:layout_weight="0.5"
+                    android:maxWidth="90dp"
+                    android:minWidth="90dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Bits Per Sample: "
+                    android:id="@+id/textView_bitsPerSample"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_weight="0.5"
+                    android:minWidth="250dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bitsPerSampleArrayFirstElement"
+                    android:id="@+id/button_bitsPerSample"
+                    android:layout_weight="0.5"
+                    android:maxWidth="90dp"
+                    android:minWidth="90dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Channel Type: "
+                    android:id="@+id/textView_channelType"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_weight="0.5"
+                    android:minWidth="250dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/channelTypeArrayFirstElement"
+                    android:id="@+id/button_channelType"
+                    android:layout_weight="0.5"
+                    android:maxWidth="90dp"
+                    android:minWidth="90dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Bytes Per Frame: "
+                    android:id="@+id/textView_bytesPerFrameTitle"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_weight="0.5"
+                    android:minWidth="250dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""
+                    android:id="@+id/textView_bytesPerFrame"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_weight="0.5"
+                    android:maxWidth="90dp"
+                    android:minWidth="90dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Endian: "
+                    android:id="@+id/textView_endian"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_weight="0.5"
+                    android:minWidth="250dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/endianArrayFirstElement"
+                    android:id="@+id/button_endian"
+                    android:layout_weight="0.5"
+                    android:maxWidth="90dp"
+                    android:minWidth="90dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Sample Rate: "
+                    android:id="@+id/textView_sampleRate_title"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_weight="0.5"
+                    android:minWidth="250dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sampleRateArrayFirstElement"
+                    android:id="@+id/textView_sampleRate"
+                    android:layout_weight="0.5"
+                    android:maxWidth="90dp"
+                    android:minWidth="90dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_startStreamingAudio"
+                    android:text="Start!" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>
